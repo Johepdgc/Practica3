@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica Semana 3</title>
-
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
     <h3>Johep Gradis | SMIS063421</h3>
 
-    <div class="distance">
-        <h4>Calculo de velocidad</h4>
+    <div class="container">
+        <div class="distance">
+            <h4>Calculo de velocidad</h4>
 
-        <div>
-            <label for="distancia">Distancia: </label>
-            <input id="distancia" type="number" placeholder="En kilometros" required>
+            <div>
+                <label for="distancia">Distancia: </label>
+                <input id="distancia" type="number" placeholder="En kilometros" required>
+            </div>
+            <div>
+                <label for="tiempo">Tiempo: </label>
+                <input id="tiempo" type="number" placeholder="En minutos">
+            </div>
+            <button onclick="velocidad()">Calcular</button>
+            <p id="resultado"></p>
         </div>
-        <div>
-            <label for="tiempo">Tiempo: </label>
-            <input id="tiempo" type="number" placeholder="En minutos">
+
+        <div class="triangles">
+            <h4>Tipo de Triangulo</h4>
+
+            <div>
+                <label for="lado1">Lado 1: </label>
+                <input id="lado1" type="number" placeholder="En centimetros" required>
+            </div>
+            <div>
+                <label for="lado2">Lado 2: </label>
+                <input id="lado2" type="number" placeholder="En centimetros" required>
+            </div>
+            <div>
+                <label for="lado3">Lado 3: </label>
+                <input id="lado3" type="number" placeholder="En centimetros" required>
+            </div>
+            <button onclick="tipoDeTriangulo()">Verificar tipo de triangulo</button>
+            <p id="tipo"></p>
         </div>
-        <button onclick="velocidad()">Calcular</button>
-        <p id="resultado"></p>
+
+        <div class="calculator">
+            <h4>Calculadora</h4>
+
+            <div>
+                <label for="num1">Valor 1: </label>
+                <input id="num1" type="number" placeholder="Solo numeros" required>
+            </div>
+            <div>
+                <label for="num2">Valor 2: </label>
+                <input id="num2" type="number" placeholder="Solo numeros" required>
+            </div>
+            <div>
+                <label for="operacion">Operacion: </label>
+                <!-- Etiqueta select para seleccionar la operacion en la calculadora como caja de seleccion -->
+                <select id="operacion">
+                    <option value="suma">Suma</option>
+                    <option value="resta">Resta</option>
+                    <option value="multiplicacion">Multiplicacion</option>
+                    <option value="division">Division</option>
+                </select>
+            </div>
+
+            <button onclick="calculadora()">Calcular</button>
+            <p id="residuo"></p>
+        </div>
+
+        <div class="primeNumber">
+            <h4>Numeros Primos</h4>
+
+            <div>
+                <label for="numero">Numero: </label>
+                <input id="numero" type="number" placeholder="Solo numeros" required>
+            </div>
+            <button onclick="numeroPrimo()">Verificar</button>
+            <p id="primo"></p>
+        </div>
+        <script src="./script.js"></script>
     </div>
-
-    <div class="triangles">
-        <h4>Tipo de Triangulo</h4>
-
-        <div>
-            <label for="lado1">Lado 1: </label>
-            <input id="lado1" type="number" placeholder="En centimetros" required>
-        </div>
-        <div>
-            <label for="lado2">Lado 2: </label>
-            <input id="lado2" type="number" placeholder="En centimetros" required>
-        </div>
-        <div>
-            <label for="lado3">Lado 3: </label>
-            <input id="lado3" type="number" placeholder="En centimetros" required>
-        </div>
-        <button onclick="tipoDeTriangulo()">Verificar tipo de triangulo</button>
-        <p id="tipo"></p>
-    </div>
-
-    <div class="calculator">
-        <h4>Calculadora</h4>
-
-        <div>
-            <label for="num1">Valor 1: </label>
-            <input id="num1" type="number" placeholder="Solo numeros" required>
-        </div>
-        <div>
-            <label for="num2">Valor 2: </label>
-            <input id="num2" type="number" placeholder="Solo numeros" required>
-        </div>
-        <div>
-            <label for="operacion">Operacion: </label>
-            <!-- Etiqueta select para seleccionar la operacion en la calculadora como caja de seleccion -->
-            <select id="operacion">
-                <option value="suma">Suma</option>
-                <option value="resta">Resta</option>
-                <option value="multiplicacion">Multiplicacion</option>
-                <option value="division">Division</option>
-            </select>
-        </div>
-
-        <button onclick="calculadora()">Calcular</button>
-        <p id="residuo"></p>
-    </div>
-
-    <div class="primeNumber">
-        <h4>Numeros Primos</h4>
-
-        <div>
-            <label for="numero">Numero: </label>
-            <input id="numero" type="number" placeholder="Solo numeros" required>
-        </div>
-        <button onclick="numeroPrimo()">Verificar</button>
-        <p id="primo"></p>
-    </div>
-
-    <script src="./script.js"></script>
 </body>
+
 </html>
