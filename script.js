@@ -33,4 +33,29 @@ function calculadora() {
     let operacion = document.getElementById("operacion").value;
 
     if (operacion == "suma") {
-        let resultado = document
+        let resultado = document.getElementById("residuo").innerText = "El resultado es: " + (parseInt(numero1) + parseInt(numero2));
+    } else if (operacion == "resta") {
+        let resultado = document.getElementById("residuo").innerText = "El resultado es: " + (parseInt(numero1) - parseInt(numero2));
+    } else if (operacion == "multiplicacion") {
+        let resultado = document.getElementById("residuo").innerText = "El resultado es: " + (parseInt(numero1) * parseInt(numero2));
+    } else if (operacion == "division") {
+        let resultado = document.getElementById("residuo").innerText = "El resultado es: " + (parseInt(numero1) / parseInt(numero2));
+    }
+}
+
+function numeroPrimo() {
+    let numero = document.getElementById("numero").value;
+    let contador = 0;
+
+    for (let i = 1; i <= numero; i++) {
+        if (numero % i == 0) {
+            contador++;
+        }
+    }
+
+    if (contador == 2) {
+        let resultado = document.getElementById("primo").innerText = "El número es primo";
+    } else {
+        let resultado = document.getElementById("primo").innerText = "El número no es primo";
+    }
+}
