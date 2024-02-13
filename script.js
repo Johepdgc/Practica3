@@ -7,7 +7,7 @@ function velocidad() {
 
     let velocidad = distanciaEnMetros / tiempoEnSegundos;
     console.log(velocidad);
-    let resultado = document.getElementById("resultado").innerText = "La velocidad es de: " + velocidad.toFixed(1) + " metros sobre segundos";
+    document.getElementById("resultado").innerText = "La velocidad es de: " + velocidad.toFixed(1) + " metros sobre segundos";
 }
 
 function tipoDeTriangulo() {
@@ -17,13 +17,13 @@ function tipoDeTriangulo() {
 
     if (lado1 == lado2 && lado2 == lado3) {
         console.log("Equilatero");
-        let resultado = document.getElementById("tipo").innerText = "El triángulo es equilatero";
+        document.getElementById("tipo").innerText = "El triángulo es equilatero";
     } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
         console.log("Isósceles");
-        let resultado = document.getElementById("tipo").innerText = "El triángulo es isósceles";
+        document.getElementById("tipo").innerText = "El triángulo es isósceles";
     } else {
         console.log("Escaleno");
-        let resultado = document.getElementById("tipo").innerText = "El triángulo es escaleno";
+        document.getElementById("tipo").innerText = "El triángulo es escaleno";
     }
 }
 
@@ -33,13 +33,13 @@ function calculadora() {
     let operacion = document.getElementById("operacion").value;
 
     if (operacion == "suma") {
-        let resultado = document.getElementById("residuo").innerText = "El resultado es: " + (parseInt(numero1) + parseInt(numero2));
+        document.getElementById("residuo").innerText = "El resultado es: " + (parseInt(numero1) + parseInt(numero2));
     } else if (operacion == "resta") {
-        let resultado = document.getElementById("residuo").innerText = "El resultado es: " + (parseInt(numero1) - parseInt(numero2));
+        document.getElementById("residuo").innerText = "El resultado es: " + (parseInt(numero1) - parseInt(numero2));
     } else if (operacion == "multiplicacion") {
-        let resultado = document.getElementById("residuo").innerText = "El resultado es: " + (parseInt(numero1) * parseInt(numero2));
+        document.getElementById("residuo").innerText = "El resultado es: " + (parseInt(numero1) * parseInt(numero2));
     } else if (operacion == "division") {
-        let resultado = document.getElementById("residuo").innerText = "El resultado es: " + (parseInt(numero1) / parseInt(numero2));
+        document.getElementById("residuo").innerText = "El resultado es: " + (parseInt(numero1) / parseInt(numero2));
     }
 }
 
@@ -54,8 +54,8 @@ function numeroPrimo() {
     }
 
     if (contador == 2) {
-        let resultado = document.getElementById("primo").innerText = "El número es primo";
+        document.getElementById("primo").innerText = "El número es primo";
     } else {
-        let resultado = document.getElementById("primo").innerText = "El número no es primo";
+        document.getElementById("primo").innerText = "El número no es primo";
     }
 }
